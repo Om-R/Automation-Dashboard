@@ -1,0 +1,26 @@
+2024-12-16 10:46:01,119 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 10:46:17,112 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 10:46:22,953 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 10:46:39,237 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 10:58:06,174 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 12:19:25,636 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 13:04:35,065 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 13:09:39,193 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 13:41:05,820 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 13:44:03,784 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 13:49:35,278 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 15:34:58,158 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 15:38:25,281 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 15:40:27,122 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 15:42:52,873 - INFO - User John Doe added successfully.
+2024-12-16 15:42:52,873 - INFO - Comment added to issue TEST-123.
+2024-12-16 15:43:02,881 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 15:43:15,861 - INFO - User John Doe added successfully.
+2024-12-16 15:43:15,862 - INFO - Comment added to issue TEST-123.
+2024-12-16 15:43:25,868 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 15:45:21,632 - INFO - User John Doe added successfully.
+2024-12-16 15:45:21,633 - INFO - Comment added to issue TEST-123.
+2024-12-16 15:45:31,640 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 15:48:45,025 - INFO - User John Doe added successfully.
+2024-12-16 15:48:45,026 - INFO - Comment added to issue TEST-123.
+2024-12-16 15:48:55,033 - INFO - Issue TEST-123 transitioned to 'Resolved'.
