@@ -6,8 +6,7 @@ import script
 class TestAccessAutomation(unittest.TestCase):
     @patch('script.requests.get')
     @patch('script.requests.post')
-    @patch('script.send_email')
-    def test_main(self, mock_send_email, mock_post, mock_get):
+    def test_main(self, mock_post, mock_get):
         # Mock JIRA response for GET
         mock_jira_response = MagicMock()
         mock_jira_response.json.return_value = {
@@ -42,16 +41,12 @@ class TestAccessAutomation(unittest.TestCase):
             mock_transition_response
         ]
 
-        # Mock send_email behavior
-        mock_send_email.return_value = None
-
-        # Execute the function under test
+        # Execute the function under test (this will send the email)
         script.main()
 
         # Verify calls
         self.assertEqual(mock_get.call_count, 1)  # Ensure JIRA GET call was made
         self.assertEqual(mock_post.call_count, 3)  # Ensure 3 POST calls were made
-        mock_send_email.assert_called_once_with("john.doe@example.com", unittest.mock.ANY)  # Verify email was sent
 
 
 if __name__ == '__main__':

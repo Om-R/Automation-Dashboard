@@ -24,3 +24,36 @@
 2024-12-16 15:48:45,025 - INFO - User John Doe added successfully.
 2024-12-16 15:48:45,026 - INFO - Comment added to issue TEST-123.
 2024-12-16 15:48:55,033 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 16:00:01,176 - INFO - User John Doe added successfully.
+2024-12-16 16:00:01,176 - INFO - Comment added to issue TEST-123.
+2024-12-16 16:00:11,188 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 16:51:13,375 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 16:51:39,876 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 16:52:39,119 - INFO - Encoded JQL query: project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 16:52:39,306 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%253D%2522Tools%2BHelpdesk%2522%2Band%2B%2522Request%2BType%2522%2B%253D%2B%2522Dashboard%2Baccess%2B%2528TH%2529%2522%2Band%2Bstatus%2B%253D%2B%2522In%2BProgress%2522%2Border%2Bby%2Bcreated%2BDESC
+2024-12-16 16:52:53,054 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
+2024-12-16 17:03:57,836 - INFO - Email sent to testuser@example.com.
+2024-12-16 17:08:04,107 - INFO - User John Doe added successfully.
+2024-12-16 17:08:04,108 - INFO - Comment added to issue TEST-123.
+2024-12-16 17:08:14,115 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 17:08:46,306 - INFO - User John Doe added successfully.
+2024-12-16 17:08:46,307 - INFO - Comment added to issue TEST-123.
+2024-12-16 17:08:56,314 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 17:09:07,676 - INFO - User John Doe added successfully.
+2024-12-16 17:09:07,676 - INFO - Comment added to issue TEST-123.
+2024-12-16 17:09:17,684 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 17:10:09,979 - INFO - User John Doe added successfully.
+2024-12-16 17:10:09,980 - INFO - Comment added to issue TEST-123.
+2024-12-16 17:10:19,988 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 17:13:13,570 - INFO - User John Doe added successfully.
+2024-12-16 17:13:13,570 - INFO - Comment added to issue TEST-123.
+2024-12-16 17:13:23,578 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 17:14:57,416 - INFO - User John Doe added successfully.
+2024-12-16 17:14:57,416 - INFO - Comment added to issue TEST-123.
+2024-12-16 17:15:07,424 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-16 17:15:24,536 - INFO - User John Doe added successfully.
+2024-12-16 17:15:24,537 - INFO - Comment added to issue TEST-123.
+2024-12-16 17:15:34,544 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-17 10:01:51,616 - INFO - User John Doe added successfully.
+2024-12-17 10:01:51,616 - INFO - Comment added to issue TEST-123.
+2024-12-17 10:02:01,623 - INFO - Issue TEST-123 transitioned to 'Resolved'.
