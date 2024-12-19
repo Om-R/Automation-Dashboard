@@ -1,91 +1,24 @@
-2024-12-16 11:30:25,560 - ERROR - HTTP request error for https://lendingkart.atlassian.net/rest/api/2/search: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+AND+%22Request+Type%22%3D%22Dashboard+access+%28TH%29%22+AND+status%3D%22In+Progress%22+ORDER+BY+created+DESC
-2024-12-16 11:56:42,145 - ERROR - HTTP request error for https://lendingkart.atlassian.net/rest/api/2/search: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+AND+%22Request+Type%22%3D%22Dashboard+access+%28TH%29%22+AND+status%3D%22In+Progress%22+ORDER+BY+created+DESC
-2024-12-17 10:03:14,633 - INFO - User John Doe added successfully.
-2024-12-17 10:03:14,634 - INFO - Comment added to issue TEST-123.
-2024-12-17 10:03:24,640 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 10:39:59,098 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 10:40:12,351 - INFO - User John Doe added successfully.
-2024-12-17 10:40:12,352 - INFO - Comment added to issue TEST-123.
-2024-12-17 10:40:22,358 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 10:41:42,243 - INFO - User John Doe added successfully.
-2024-12-17 10:41:42,243 - INFO - Comment added to issue TEST-123.
-2024-12-17 10:41:52,249 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 10:43:12,915 - INFO - User John Doe added successfully.
-2024-12-17 10:43:12,916 - INFO - Comment added to issue TEST-123.
-2024-12-17 10:43:22,923 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 10:51:09,056 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:35:35,586 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:39:23,543 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:43:20,017 - INFO - User John Doe has been added successfully.
-2024-12-17 15:43:20,018 - INFO - Comment added to issue TEST-123.
-2024-12-17 15:43:30,025 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 15:43:40,180 - ERROR - Failed to send email to om.jain@lendingkart.com: Connection unexpectedly closed
-2024-12-17 15:46:21,613 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:47:01,553 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:47:29,710 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:50:46,815 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:50:50,701 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:55:00,274 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:55:19,739 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:55:41,635 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:55:44,943 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:57:40,479 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 15:57:46,548 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 16:05:35,539 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 16:11:02,651 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-17 16:11:02,652 - INFO - User John Doe has been added successfully.
-2024-12-17 16:11:02,652 - INFO - Comment added to issue TEST-123.
-2024-12-17 16:11:12,658 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 16:11:20,042 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-801d5ab3a35sm5521990a12.30 - gsmtp')
-2024-12-17 16:15:02,852 - WARNING - Role 'Admin' for user 'John Doe' is not 'read-only'. Skipping issue TEST-123.
-2024-12-17 16:15:27,689 - WARNING - Role 'Admin' for user 'John Doe' is not 'read-only'. Skipping issue TEST-123.
-2024-12-17 16:15:53,654 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-17 16:15:53,654 - INFO - User John Doe has been added successfully.
-2024-12-17 16:15:53,654 - INFO - Comment added to issue TEST-123.
-2024-12-17 16:16:03,659 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 16:16:10,305 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-218a1e6476csm56424245ad.219 - gsmtp')
-2024-12-17 16:16:28,122 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-17 16:16:28,122 - INFO - User John Doe has been added successfully.
-2024-12-17 16:16:28,122 - INFO - Comment added to issue TEST-123.
-2024-12-17 16:16:38,129 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 16:16:44,724 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-218a1db58cdsm56739475ad.38 - gsmtp')
-2024-12-17 16:21:43,698 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-17 16:21:43,698 - INFO - User John Doe has been added successfully.
-2024-12-17 16:21:43,698 - INFO - Comment added to issue TEST-123.
-2024-12-17 16:21:53,705 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 16:22:00,535 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-2f142fc308csm9691013a91.50 - gsmtp')
-2024-12-17 16:23:07,953 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-17 16:23:07,954 - INFO - User John Doe has been added successfully.
-2024-12-17 16:23:07,954 - INFO - Comment added to issue TEST-123.
-2024-12-17 16:23:17,962 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 16:23:24,655 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-72918af0decsm6344417b3a.85 - gsmtp')
-2024-12-17 16:26:10,401 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-17 16:26:10,402 - INFO - User John Doe has been added successfully.
-2024-12-17 16:26:10,402 - INFO - Comment added to issue TEST-123.
-2024-12-17 16:26:20,411 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 16:26:27,005 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-801d5aaf5f7sm5529261a12.24 - gsmtp')
-2024-12-17 16:29:56,878 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 16:30:16,406 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 16:30:37,293 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 17:09:18,861 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-17 17:09:18,862 - INFO - User John Doe has been added successfully.
-2024-12-17 17:09:18,862 - INFO - Comment added to issue TEST-123.
-2024-12-17 17:09:28,870 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 17:09:36,384 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-2f142c2b1f6sm9773304a91.0 - gsmtp')
-2024-12-17 17:18:24,632 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 17:18:49,759 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 17:19:21,030 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-17 17:19:49,681 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-18 10:12:38,135 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-18 10:14:46,605 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-18 10:18:56,844 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-18 10:19:06,492 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-18 10:19:06,493 - INFO - User John Doe has been added successfully.
-2024-12-18 10:19:06,493 - INFO - Comment added to issue TEST-123.
-2024-12-18 10:19:16,500 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-18 10:19:23,507 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-218a1db5e10sm67256465ad.14 - gsmtp')
-2024-12-18 10:45:38,265 - INFO - Processing user: John Doe, Email: john.doe@example.com, Password: Lendingkart@321, Role: Admin
-2024-12-18 10:45:38,266 - INFO - User John Doe has been added successfully.
-2024-12-18 10:45:38,266 - INFO - Comment added to issue TEST-123.
-2024-12-18 10:45:48,273 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-18 10:45:55,758 - ERROR - Failed to send email to om.jain@lendingkart.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-218a1e500b8sm66243495ad.123 - gsmtp')
+2024-12-18 16:56:26,824 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search
+2024-12-18 16:56:26,824 - INFO - Request Headers: <requests.auth.HTTPBasicAuth object at 0x10156ee50>
+2024-12-18 16:56:26,824 - INFO - Request Params: {'jql': 'project="Tools Helpdesk" and "Request Type" = "Dashboard Access" and status = "Approval Required" order by created DESC', 'fields': 'customfield_12305,customfield_12420,customfield_12477,customfield_12313,customfield_12334'}
+2024-12-18 16:56:27,088 - INFO - Response Status Code: 400
+2024-12-18 16:56:27,088 - INFO - Response Text: {"errorMessages":["Field 'Request Type' does not exist or this field cannot be viewed by anonymous users.","The value 'Tools Helpdesk' does not exist for the field 'project'."],"warningMessages":[]}
+2024-12-18 16:56:27,088 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+Access%22+and+status+%3D+%22Approval+Required%22+order+by+created+DESC
+2024-12-18 16:56:32,664 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search
+2024-12-18 16:56:32,664 - INFO - Request Headers: <requests.auth.HTTPBasicAuth object at 0x104f9ebd0>
+2024-12-18 16:56:32,664 - INFO - Request Params: {'jql': 'project="Tools Helpdesk" and "Request Type" = "Dashboard Access" and status = "Approval Required" order by created DESC', 'fields': 'customfield_12305,customfield_12420,customfield_12477,customfield_12313,customfield_12334'}
+2024-12-18 16:56:32,965 - INFO - Response Status Code: 400
+2024-12-18 16:56:32,966 - INFO - Response Text: {"errorMessages":["Field 'Request Type' does not exist or this field cannot be viewed by anonymous users.","The value 'Tools Helpdesk' does not exist for the field 'project'."],"warningMessages":[]}
+2024-12-18 16:56:32,966 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+Access%22+and+status+%3D+%22Approval+Required%22+order+by+created+DESC
+2024-12-18 17:05:43,947 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search
+2024-12-18 17:05:43,947 - INFO - Request Headers: <requests.auth.HTTPBasicAuth object at 0x101936e50>
+2024-12-18 17:05:43,947 - INFO - Request Params: {'jql': 'project="Tools Helpdesk" and "Request Type" = "Dashboard Access" and status = "Approval Required" order by created DESC', 'fields': 'customfield_12305,customfield_12420,customfield_12477,customfield_12313,customfield_12334'}
+2024-12-18 17:05:44,259 - INFO - Response Status Code: 400
+2024-12-18 17:05:44,259 - INFO - Response Text: {"errorMessages":["Field 'Request Type' does not exist or this field cannot be viewed by anonymous users.","The value 'Tools Helpdesk' does not exist for the field 'project'."],"warningMessages":[]}
+2024-12-18 17:05:44,260 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+Access%22+and+status+%3D+%22Approval+Required%22+order+by+created+DESC
+2024-12-18 18:38:13,689 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search
+2024-12-18 18:38:13,689 - INFO - Request Headers: <requests.auth.HTTPBasicAuth object at 0x100df5290>
+2024-12-18 18:38:13,689 - INFO - Request Params: {'jql': 'project="Tools Helpdesk" and "Request Type" = "Dashboard Access" and status = "Approval Required" order by created DESC', 'fields': 'customfield_12305,customfield_12420,customfield_12477,customfield_12313,customfield_12334'}
+2024-12-18 18:38:13,958 - INFO - Response Status Code: 400
+2024-12-18 18:38:13,958 - INFO - Response Text: {"errorMessages":["Field 'Request Type' does not exist or this field cannot be viewed by anonymous users.","The value 'Tools Helpdesk' does not exist for the field 'project'."],"warningMessages":[]}
+2024-12-18 18:38:13,958 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+Access%22+and+status+%3D+%22Approval+Required%22+order+by+created+DESC
