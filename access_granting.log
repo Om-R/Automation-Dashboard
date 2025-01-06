@@ -1,59 +1,152 @@
-2024-12-16 10:46:01,119 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 10:46:17,112 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 10:46:22,953 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 10:46:39,237 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 10:58:06,174 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 12:19:25,636 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 13:04:35,065 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 13:09:39,193 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 13:41:05,820 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 13:44:03,784 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 13:49:35,278 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 15:34:58,158 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 15:38:25,281 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 15:40:27,122 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 15:42:52,873 - INFO - User John Doe added successfully.
-2024-12-16 15:42:52,873 - INFO - Comment added to issue TEST-123.
-2024-12-16 15:43:02,881 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 15:43:15,861 - INFO - User John Doe added successfully.
-2024-12-16 15:43:15,862 - INFO - Comment added to issue TEST-123.
-2024-12-16 15:43:25,868 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 15:45:21,632 - INFO - User John Doe added successfully.
-2024-12-16 15:45:21,633 - INFO - Comment added to issue TEST-123.
-2024-12-16 15:45:31,640 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 15:48:45,025 - INFO - User John Doe added successfully.
-2024-12-16 15:48:45,026 - INFO - Comment added to issue TEST-123.
-2024-12-16 15:48:55,033 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 16:00:01,176 - INFO - User John Doe added successfully.
-2024-12-16 16:00:01,176 - INFO - Comment added to issue TEST-123.
-2024-12-16 16:00:11,188 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 16:51:13,375 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 16:51:39,876 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 16:52:39,119 - INFO - Encoded JQL query: project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 16:52:39,306 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%253D%2522Tools%2BHelpdesk%2522%2Band%2B%2522Request%2BType%2522%2B%253D%2B%2522Dashboard%2Baccess%2B%2528TH%2529%2522%2Band%2Bstatus%2B%253D%2B%2522In%2BProgress%2522%2Border%2Bby%2Bcreated%2BDESC
-2024-12-16 16:52:53,054 - ERROR - An error occurred: 400 Client Error: Bad Request for url: https://lendingkart.atlassian.net/rest/api/2/search?jql=project%3D%22Tools+Helpdesk%22+and+%22Request+Type%22+%3D+%22Dashboard+access+%28TH%29%22+and+status+%3D+%22In+Progress%22+order+by+created+DESC
-2024-12-16 17:03:57,836 - INFO - Email sent to testuser@example.com.
-2024-12-16 17:08:04,107 - INFO - User John Doe added successfully.
-2024-12-16 17:08:04,108 - INFO - Comment added to issue TEST-123.
-2024-12-16 17:08:14,115 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 17:08:46,306 - INFO - User John Doe added successfully.
-2024-12-16 17:08:46,307 - INFO - Comment added to issue TEST-123.
-2024-12-16 17:08:56,314 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 17:09:07,676 - INFO - User John Doe added successfully.
-2024-12-16 17:09:07,676 - INFO - Comment added to issue TEST-123.
-2024-12-16 17:09:17,684 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 17:10:09,979 - INFO - User John Doe added successfully.
-2024-12-16 17:10:09,980 - INFO - Comment added to issue TEST-123.
-2024-12-16 17:10:19,988 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 17:13:13,570 - INFO - User John Doe added successfully.
-2024-12-16 17:13:13,570 - INFO - Comment added to issue TEST-123.
-2024-12-16 17:13:23,578 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 17:14:57,416 - INFO - User John Doe added successfully.
-2024-12-16 17:14:57,416 - INFO - Comment added to issue TEST-123.
-2024-12-16 17:15:07,424 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-16 17:15:24,536 - INFO - User John Doe added successfully.
-2024-12-16 17:15:24,537 - INFO - Comment added to issue TEST-123.
-2024-12-16 17:15:34,544 - INFO - Issue TEST-123 transitioned to 'Resolved'.
-2024-12-17 10:01:51,616 - INFO - User John Doe added successfully.
-2024-12-17 10:01:51,616 - INFO - Comment added to issue TEST-123.
-2024-12-17 10:02:01,623 - INFO - Issue TEST-123 transitioned to 'Resolved'.
+2024-12-20 16:10:52,302 - INFO - Starting access automation script
+2024-12-20 16:10:52,303 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2024-12-20 16:10:57,249 - INFO - Response Status Code: 200
+2024-12-20 16:10:57,259 - INFO - Fetched 50 issues from JIRA
+2024-12-20 16:10:57,298 - INFO - JIRA issues written to output.json
+2024-12-20 16:10:57,299 - INFO - Fetched 50 issues from JIRA.
+2024-12-20 16:10:57,299 - INFO - Access automation script completed
+2024-12-20 16:11:14,906 - INFO - Starting access automation script
+2024-12-20 16:11:14,909 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2024-12-20 16:11:19,739 - INFO - Response Status Code: 200
+2024-12-20 16:11:19,750 - INFO - Fetched 50 issues from JIRA
+2024-12-20 16:11:20,430 - INFO - JIRA issues written to output.json
+2024-12-20 16:11:20,431 - INFO - Fetched 50 issues from JIRA.
+2024-12-20 16:11:20,431 - INFO - Access automation script completed
+2024-12-20 16:28:32,388 - INFO - Starting access automation script
+2024-12-20 16:28:32,389 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2024-12-20 16:28:35,118 - INFO - Response Status Code: 200
+2024-12-20 16:28:35,128 - INFO - Fetched 50 issues from JIRA
+2024-12-20 16:28:35,987 - INFO - JIRA issues written to output.json
+2024-12-20 16:28:35,988 - INFO - Fetched 50 issues from JIRA.
+2024-12-20 16:28:35,988 - INFO - Access automation script completed
+2024-12-20 16:28:56,779 - INFO - Starting access automation script
+2024-12-20 16:28:56,779 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2024-12-20 16:29:01,556 - INFO - Response Status Code: 200
+2024-12-20 16:29:01,567 - INFO - Fetched 50 issues from JIRA
+2024-12-20 16:29:02,236 - INFO - JIRA issues written to output.json
+2024-12-20 16:29:02,238 - INFO - Fetched 50 issues from JIRA.
+2024-12-20 16:29:02,238 - INFO - Access automation script completed
+2024-12-20 16:29:21,436 - INFO - Starting access automation script
+2024-12-20 16:29:21,436 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2024-12-20 16:29:24,377 - INFO - Response Status Code: 200
+2024-12-20 16:29:24,388 - INFO - Fetched 50 issues from JIRA
+2024-12-20 16:29:25,100 - INFO - JIRA issues written to output.json
+2024-12-20 16:29:25,101 - INFO - Fetched 50 issues from JIRA.
+2024-12-20 16:29:25,101 - INFO - Access automation script completed
+2025-01-02 10:04:45,283 - INFO - Starting access automation script
+2025-01-02 10:04:45,283 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-02 10:04:48,399 - INFO - Response Status Code: 200
+2025-01-02 10:04:48,409 - INFO - Fetched 50 issues from JIRA
+2025-01-02 10:04:48,466 - INFO - JIRA issues written to output.json
+2025-01-02 10:04:48,466 - INFO - Fetched 50 issues from JIRA.
+2025-01-02 10:04:48,466 - INFO - Access automation script completed
+2025-01-02 10:05:51,429 - INFO - Starting access automation script
+2025-01-02 10:05:51,430 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-02 10:05:54,834 - INFO - Response Status Code: 200
+2025-01-02 10:05:54,843 - INFO - Fetched 50 issues from JIRA
+2025-01-02 10:05:55,554 - INFO - JIRA issues written to output.json
+2025-01-02 10:05:55,555 - INFO - Fetched 50 issues from JIRA.
+2025-01-02 10:05:55,555 - INFO - Access automation script completed
+2025-01-02 10:06:05,649 - INFO - Starting access automation script
+2025-01-02 10:06:05,649 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-02 10:06:08,909 - INFO - Response Status Code: 200
+2025-01-02 10:06:08,914 - INFO - Fetched 50 issues from JIRA
+2025-01-02 10:06:08,948 - INFO - JIRA issues written to output.json
+2025-01-02 10:06:08,948 - INFO - Fetched 50 issues from JIRA.
+2025-01-02 10:06:08,948 - INFO - Access automation script completed
+2025-01-02 14:54:57,153 - INFO - Starting access automation script
+2025-01-02 14:54:57,153 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-02 14:55:00,384 - INFO - Response Status Code: 200
+2025-01-02 14:55:00,389 - INFO - Fetched 50 issues from JIRA
+2025-01-02 14:55:00,428 - INFO - JIRA issues written to output.json
+2025-01-02 14:55:00,429 - INFO - Fetched 50 issues from JIRA.
+2025-01-02 14:55:00,429 - INFO - Access automation script completed
+2025-01-02 14:55:10,150 - INFO - Starting access automation script
+2025-01-02 14:55:10,150 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-02 14:55:15,406 - INFO - Response Status Code: 200
+2025-01-02 14:55:15,415 - INFO - Fetched 50 issues from JIRA
+2025-01-02 14:55:15,462 - INFO - JIRA issues written to output.json
+2025-01-02 14:55:15,463 - INFO - Fetched 50 issues from JIRA.
+2025-01-02 14:55:15,463 - INFO - Access automation script completed
+2025-01-02 15:06:46,798 - INFO - Starting access automation script
+2025-01-02 15:06:46,798 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-02 15:06:50,234 - INFO - Response Status Code: 200
+2025-01-02 15:06:50,246 - INFO - Fetched 50 issues from JIRA
+2025-01-02 15:06:50,299 - INFO - JIRA issues written to output.json
+2025-01-02 15:06:50,300 - INFO - Fetched 50 issues from JIRA.
+2025-01-02 15:06:50,300 - INFO - Access automation script completed
+
+2025-01-06 12:18:07,304 - INFO - Starting access automation script
+2025-01-06 12:18:07,304 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-06 12:18:07,770 - INFO - Response Status Code: 200
+2025-01-06 12:18:07,771 - INFO - Fetched 50 issues from JIRA
+2025-01-06 12:18:07,799 - INFO - JIRA issues written to output.json
+2025-01-06 12:18:07,800 - WARNING - Missing required fields for issue TH-4296. Skipping...
+2025-01-06 12:18:07,800 - INFO - Processing user: KRISHNA KANT, Email: dipti.shah@lendingkart.com, Password: Lendingkart@321, Role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11679', 'value': 'Account Read Only', 'id': '11679'}
+2025-01-06 12:18:07,963 - ERROR - Failed to add user KRISHNA KANT: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-06 12:18:07,966 - WARNING - Missing required fields for issue TH-4284. Skipping...
+2025-01-06 12:18:07,966 - WARNING - Missing required fields for issue TH-4269. Skipping...
+2025-01-06 12:18:07,966 - WARNING - Missing required fields for issue TH-4245. Skipping...
+2025-01-06 12:18:07,967 - WARNING - Missing required fields for issue TH-4227. Skipping...
+2025-01-06 12:18:07,967 - WARNING - Missing required fields for issue TH-4202. Skipping...
+2025-01-06 12:18:07,967 - WARNING - Missing required fields for issue TH-4160. Skipping...
+2025-01-06 12:18:07,967 - INFO - Processing user: Ankita Kumari, Email: ankitakumari@lendingkart.com, Password: Lendingkart@321, Role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11698', 'value': 'Channel User', 'id': '11698'}
+2025-01-06 12:18:08,171 - ERROR - Failed to add user Ankita Kumari: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-06 12:18:08,171 - INFO - Processing user: Rohit Kulkarni, Email: rohit.kulkarni@lendingkart.com, Password: Lendingkart@321, Role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11710', 'value': 'Acceptance Manager', 'id': '11710'}
+2025-01-06 12:18:08,331 - ERROR - Failed to add user Rohit Kulkarni: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-06 12:18:08,331 - WARNING - Missing required fields for issue TH-4142. Skipping...
+2025-01-06 12:18:08,331 - WARNING - Missing required fields for issue TH-4132. Skipping...
+2025-01-06 12:18:08,331 - WARNING - Missing required fields for issue TH-4125. Skipping...
+2025-01-06 12:18:08,331 - WARNING - Missing required fields for issue TH-4121. Skipping...
+2025-01-06 12:18:08,331 - WARNING - Missing required fields for issue TH-4087. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4086. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4081. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4064. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4063. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4062. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4035. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4027. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4023. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4016. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-4015. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-3963. Skipping...
+2025-01-06 12:18:08,332 - WARNING - Missing required fields for issue TH-3946. Skipping...
+2025-01-06 12:18:08,333 - WARNING - Missing required fields for issue TH-3916. Skipping...
+2025-01-06 12:18:08,333 - INFO - Processing user: Nageshwar Kunchikorve, Rajashree Pawar., Email: nageshwar.kunchikorve@lendingkart.com, Password: Lendingkart@321, Role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11663', 'value': 'Collections', 'id': '11663'}
+2025-01-06 12:18:08,490 - ERROR - Failed to add user Nageshwar Kunchikorve, Rajashree Pawar.: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-06 12:18:08,491 - WARNING - Missing required fields for issue TH-3908. Skipping...
+2025-01-06 12:18:08,491 - WARNING - Missing required fields for issue TH-3855. Skipping...
+2025-01-06 12:18:08,491 - WARNING - Missing required fields for issue TH-3834. Skipping...
+2025-01-06 12:18:08,491 - WARNING - Missing required fields for issue TH-3833. Skipping...
+2025-01-06 12:18:08,491 - WARNING - Missing required fields for issue TH-3811. Skipping...
+2025-01-06 12:18:08,491 - WARNING - Missing required fields for issue TH-3810. Skipping...
+2025-01-06 12:18:08,491 - WARNING - Missing required fields for issue TH-3809. Skipping...
+2025-01-06 12:18:08,491 - WARNING - Missing required fields for issue TH-3808. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3807. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3806. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3804. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3745. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3744. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3730. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3715. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3708. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3704. Skipping...
+2025-01-06 12:18:08,492 - WARNING - Missing required fields for issue TH-3688. Skipping...
+2025-01-06 12:18:08,493 - WARNING - Missing required fields for issue TH-3686. Skipping...
+2025-01-06 12:18:08,493 - WARNING - Missing required fields for issue TH-3685. Skipping...
+2025-01-06 12:18:08,493 - WARNING - Missing required fields for issue TH-3684. Skipping...
+2025-01-06 12:18:08,493 - INFO - Access automation script completed
+2025-01-06 13:52:11,666 - INFO - Starting access automation script
+2025-01-06 13:52:11,667 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-06 13:52:16,630 - INFO - Response Status Code: 200
+2025-01-06 13:52:16,638 - INFO - Fetched 50 issues from JIRA
+2025-01-06 13:52:16,686 - INFO - JIRA issues written to output.json
+2025-01-06 13:52:16,686 - INFO - Fetched 50 issues from JIRA.
+2025-01-06 13:52:16,686 - INFO - Access automation script completed
+2025-01-06 13:56:02,067 - INFO - Starting access automation script
+2025-01-06 13:56:02,067 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-06 13:56:05,117 - INFO - Response Status Code: 200
+2025-01-06 13:56:05,126 - INFO - Fetched 50 issues from JIRA
+2025-01-06 13:56:05,841 - INFO - JIRA issues written to output.json
+2025-01-06 13:56:05,842 - INFO - Fetched 50 issues from JIRA.
+2025-01-06 13:56:05,842 - INFO - Access automation script completed
