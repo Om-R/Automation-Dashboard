@@ -7,20 +7,20 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import requests
 from requests.auth import HTTPBasicAuth
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 JIRA_URL = "https://lendingkart.atlassian.net/rest/api/2/search"
-JIRA_USER = "automation.user@lendingkart.com"
+JIRA_USER = "automation.user@lendingkart.com"   #  tse@lendingkart.com -- Super admin   took jsession id to give access Ask ankur which user id is giving access
 JIRA_API_TOKEN="ATATT3xFfGF07jnnP2h7-tWWI1sV-ZPums3kvejb1zV4d8eCwrbXhY-MTLIQDv5rkCcOt6GU3o8BK03lBKB9kiUT8zZIu3JlZggC8yQwfpA_e-pfuHhCMX6yTv55KowjGhX8nMyYYzpSlpgILo0HNrTk4Rg2Fqto0EwJOUKeNDSrB2Um9wbua8Y=097D1ED1"
 JIRA_AUTH = HTTPBasicAuth(JIRA_USER, JIRA_API_TOKEN)
 JIRA_PROJECT_KEY = "Tools Helpdesk"
-JIRA_REQUEST_TYPE = "Dashboard Access"
+JIRA_REQUEST_TYPE = "Dashboard Access (TH)"   # Ask virendra regarding this
 JIRA_STATUS = "Approval Required"
 JIRA_TRANSITION_URL = "https://lendingkart.atlassian.net/rest/api/2/issue/{issue_key}/transitions"
 JIRA_COMMENT_URL = "https://lendingkart.atlassian.net/rest/api/2/issue/{issue_key}/comment"
-ADD_USER_URL = "https://app.lendingkart.com/admin/addUser"
+ADD_USER_URL = "https://app.lendingkart.com/admin/addUser"   # Cross check the link with ankur for adding user to dashboard
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
 SMTP_USER = "automation.user@lendingkart.com"
@@ -28,6 +28,7 @@ SMTP_PASS = "eehi jeqo tskb dbwb"
 FROM_EMAIL = SMTP_USER
 EMAIL_SUBJECT = "Your Dashboard Access Credentials"
 CONSTANT_PASSWORD = "Lendingkart@321"
+JSESSIONID = "7b6c4bd7-2e93-410e-8014-24c0b30be582"
 
 logging.basicConfig(
     filename='access_automation.log',
@@ -61,8 +62,8 @@ def send_email(to_email, password):
 # Write user data to JSON file
 def write_user_data_to_json(user_data):
     try:
-        if os.path.exists('users_data.json'):
-            with open('users_data.json', 'r') as file:
+        if os.path.exists('../users_data.json'):
+            with open('../users_data.json', 'r') as file:
                 data = json.load(file)
         else:
             data = []
@@ -80,7 +81,7 @@ def write_user_data_to_json(user_data):
 def get_jira_issues():
     query = {
         'jql': f'project="{JIRA_PROJECT_KEY}" AND status="{JIRA_STATUS}" ORDER BY created DESC',
-        'fields': 'customfield_12305,customfield_12420,customfield_12477,customfield_12313,customfield_12334'
+        'fields': 'customfield_12528,customfield_12420,customfield_12477,customfield_12529,customfield_12529'
     }
 
     try:
@@ -102,7 +103,7 @@ def get_jira_issues():
         with open('user_data.json', 'w') as file:
             json.dump(issues, file, indent=4)
 
-        logging.info("JIRA issues written to output.json")
+        logging.info("JIRA issues written to user_data.json")
         return issues.get('issues', [])
 
     except requests.exceptions.RequestException as e:
@@ -116,11 +117,11 @@ def process_user(issue):
     fields = issue['fields']
 
     # Extracting the custom fields
-    name = fields.get('customfield_12305')
+    name = fields.get('customfield_12528')
     email = fields.get('customfield_12420')
     mobile = fields.get('customfield_12477')
-    dashboard_name = fields.get('customfield_12313')
-    role_name = fields.get('customfield_12334')
+    # dashboard_name = fields.get('customfield_12529')
+    role_name = fields.get('customfield_12529')
 
     if not (name and email and role_name):
         logging.warning(f"Missing required fields for issue {issue_key}. Skipping...")
@@ -130,9 +131,11 @@ def process_user(issue):
     logging.info(f"Processing user: {name}, Email: {email}, Password: {password}, Role: {role_name}")
 
     try:
+        cookies = {'JSESSIONID': JSESSIONID}
         add_user_response = requests.post(
             ADD_USER_URL,
             headers={'Content-Type': 'application/json'},
+            cookies=cookies,
             data=json.dumps({
                 "contactNo": mobile,
                 "email": email,
@@ -145,7 +148,6 @@ def process_user(issue):
 
         if add_user_response.status_code == 201:
             logging.info(f"User {name} added successfully.")
-            # Write user data to JSON
             user_data = {
                 "name": name,
                 "email": email,
@@ -173,13 +175,12 @@ def process_user(issue):
                             JIRA_TRANSITION_URL.format(issue_key=issue_key),
                             auth=JIRA_AUTH,
                             headers={'Content-Type': 'application/json'},
-                            data=json.dumps({"transition": {"id": "761"}})  # Example transition ID, check with Ankur
+                            data=json.dumps({"transition": {"id": "761"}})
                         )
                         transition_response.raise_for_status()
 
                         if transition_response.status_code == 204:
                             logging.info(f"Issue {issue_key} transitioned to 'Resolved'.")
-                            # Send email with credentials
                             send_email(email, password)
                         else:
                             logging.error(

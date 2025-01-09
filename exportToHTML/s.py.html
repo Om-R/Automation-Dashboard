@@ -1,0 +1,236 @@
+<html>
+<head>
+<title>s.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+s.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">json</span>
+<span class="s0">import </span><span class="s1">logging</span>
+<span class="s0">import </span><span class="s1">os</span>
+<span class="s0">import </span><span class="s1">smtplib</span>
+<span class="s0">import </span><span class="s1">time</span>
+<span class="s0">from </span><span class="s1">email</span><span class="s2">.</span><span class="s1">mime</span><span class="s2">.</span><span class="s1">multipart </span><span class="s0">import </span><span class="s1">MIMEMultipart</span>
+<span class="s0">from </span><span class="s1">email</span><span class="s2">.</span><span class="s1">mime</span><span class="s2">.</span><span class="s1">text </span><span class="s0">import </span><span class="s1">MIMEText</span>
+<span class="s0">import </span><span class="s1">requests</span>
+<span class="s0">from </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">auth </span><span class="s0">import </span><span class="s1">HTTPBasicAuth</span>
+<span class="s0">from </span><span class="s1">dotenv </span><span class="s0">import </span><span class="s1">load_dotenv</span>
+
+<span class="s1">load_dotenv</span><span class="s2">()</span>
+
+<span class="s1">JIRA_URL </span><span class="s2">= </span><span class="s3">&quot;https://lendingkart.atlassian.net/rest/api/2/search&quot;</span>
+<span class="s1">JIRA_USER </span><span class="s2">= </span><span class="s3">&quot;automation.user@lendingkart.com&quot;</span>
+<span class="s1">JIRA_API_TOKEN</span><span class="s2">=</span><span class="s3">&quot;ATATT3xFfGF07jnnP2h7-tWWI1sV-ZPums3kvejb1zV4d8eCwrbXhY-MTLIQDv5rkCcOt6GU3o8BK03lBKB9kiUT8zZIu3JlZggC8yQwfpA_e-pfuHhCMX6yTv55KowjGhX8nMyYYzpSlpgILo0HNrTk4Rg2Fqto0EwJOUKeNDSrB2Um9wbua8Y=097D1ED1&quot;</span>
+<span class="s1">JIRA_AUTH </span><span class="s2">= </span><span class="s1">HTTPBasicAuth</span><span class="s2">(</span><span class="s1">JIRA_USER</span><span class="s2">, </span><span class="s1">JIRA_API_TOKEN</span><span class="s2">)</span>
+<span class="s1">JIRA_PROJECT_KEY </span><span class="s2">= </span><span class="s3">&quot;Tools Helpdesk&quot;</span>
+<span class="s1">JIRA_REQUEST_TYPE </span><span class="s2">= </span><span class="s3">&quot;Dashboard Access&quot;</span>
+<span class="s1">JIRA_STATUS </span><span class="s2">= </span><span class="s3">&quot;Approval Required&quot;</span>
+<span class="s1">JIRA_TRANSITION_URL </span><span class="s2">= </span><span class="s3">&quot;https://lendingkart.atlassian.net/rest/api/2/issue/{issue_key}/transitions&quot;</span>
+<span class="s1">JIRA_COMMENT_URL </span><span class="s2">= </span><span class="s3">&quot;https://lendingkart.atlassian.net/rest/api/2/issue/{issue_key}/comment&quot;</span>
+<span class="s1">ADD_USER_URL </span><span class="s2">= </span><span class="s3">&quot;https://app.lendingkart.com/admin/addUser&quot;</span>
+<span class="s1">SMTP_SERVER </span><span class="s2">= </span><span class="s3">&quot;smtp.gmail.com&quot;</span>
+<span class="s1">SMTP_PORT </span><span class="s2">= </span><span class="s4">465</span>
+<span class="s1">SMTP_USER </span><span class="s2">= </span><span class="s3">&quot;automation.user@lendingkart.com&quot;</span>
+<span class="s1">SMTP_PASS </span><span class="s2">= </span><span class="s3">&quot;eehi jeqo tskb dbwb&quot;</span>
+<span class="s1">FROM_EMAIL </span><span class="s2">= </span><span class="s1">SMTP_USER</span>
+<span class="s1">EMAIL_SUBJECT </span><span class="s2">= </span><span class="s3">&quot;Your Dashboard Access Credentials&quot;</span>
+<span class="s1">CONSTANT_PASSWORD </span><span class="s2">= </span><span class="s3">&quot;Lendingkart@321&quot;</span>
+
+<span class="s1">logging</span><span class="s2">.</span><span class="s1">basicConfig</span><span class="s2">(</span>
+    <span class="s1">filename</span><span class="s2">=</span><span class="s3">'access_automation.log'</span><span class="s2">,</span>
+    <span class="s1">level</span><span class="s2">=</span><span class="s1">logging</span><span class="s2">.</span><span class="s1">INFO</span><span class="s2">,</span>
+    <span class="s1">format</span><span class="s2">=</span><span class="s3">'%(asctime)s - %(levelname)s - %(message)s'</span>
+<span class="s2">)</span>
+
+<span class="s0">if not </span><span class="s1">all</span><span class="s2">([</span><span class="s1">SMTP_USER</span><span class="s2">, </span><span class="s1">SMTP_PASS</span><span class="s2">]):</span>
+    <span class="s0">raise </span><span class="s1">EnvironmentError</span><span class="s2">(</span><span class="s3">&quot;Required environment variables are not set.&quot;</span><span class="s2">)</span>
+
+
+<span class="s5"># Send email notification to user</span>
+<span class="s0">def </span><span class="s1">send_email</span><span class="s2">(</span><span class="s1">to_email</span><span class="s2">, </span><span class="s1">password</span><span class="s2">):</span>
+    <span class="s1">msg </span><span class="s2">= </span><span class="s1">MIMEMultipart</span><span class="s2">()</span>
+    <span class="s1">msg</span><span class="s2">[</span><span class="s3">'From'</span><span class="s2">] = </span><span class="s1">FROM_EMAIL</span>
+    <span class="s1">msg</span><span class="s2">[</span><span class="s3">'To'</span><span class="s2">] = </span><span class="s1">to_email</span>
+    <span class="s1">msg</span><span class="s2">[</span><span class="s3">'Subject'</span><span class="s2">] = </span><span class="s1">EMAIL_SUBJECT</span>
+
+    <span class="s1">body </span><span class="s2">= </span><span class="s3">f&quot;&quot;&quot;Your dashboard access has been granted.</span><span class="s0">\n\n</span><span class="s3">Email: </span><span class="s0">{</span><span class="s1">to_email</span><span class="s0">}</span><span class="s3">,</span><span class="s0">\n</span><span class="s3">Password: </span><span class="s0">{</span><span class="s1">password</span><span class="s0">}</span><span class="s3">&quot;&quot;&quot;</span>
+    <span class="s1">msg</span><span class="s2">.</span><span class="s1">attach</span><span class="s2">(</span><span class="s1">MIMEText</span><span class="s2">(</span><span class="s1">body</span><span class="s2">, </span><span class="s3">'plain'</span><span class="s2">))</span>
+
+    <span class="s0">try</span><span class="s2">:</span>
+        <span class="s0">with </span><span class="s1">smtplib</span><span class="s2">.</span><span class="s1">SMTP_SSL</span><span class="s2">(</span><span class="s1">SMTP_SERVER</span><span class="s2">, </span><span class="s1">SMTP_PORT</span><span class="s2">) </span><span class="s0">as </span><span class="s1">server</span><span class="s2">:</span>
+            <span class="s1">server</span><span class="s2">.</span><span class="s1">login</span><span class="s2">(</span><span class="s1">SMTP_USER</span><span class="s2">, </span><span class="s1">SMTP_PASS</span><span class="s2">)</span>
+            <span class="s1">server</span><span class="s2">.</span><span class="s1">sendmail</span><span class="s2">(</span><span class="s1">FROM_EMAIL</span><span class="s2">, </span><span class="s1">to_email</span><span class="s2">, </span><span class="s1">msg</span><span class="s2">.</span><span class="s1">as_string</span><span class="s2">())</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">f&quot;Email sent to </span><span class="s0">{</span><span class="s1">to_email</span><span class="s0">}</span><span class="s3">.&quot;</span><span class="s2">)</span>
+    <span class="s0">except </span><span class="s1">Exception </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">f&quot;Failed to send email to </span><span class="s0">{</span><span class="s1">to_email</span><span class="s0">}</span><span class="s3">: </span><span class="s0">{</span><span class="s1">e</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+
+
+<span class="s5"># Write user data to JSON file</span>
+<span class="s0">def </span><span class="s1">write_user_data_to_json</span><span class="s2">(</span><span class="s1">user_data</span><span class="s2">):</span>
+    <span class="s0">try</span><span class="s2">:</span>
+        <span class="s0">if </span><span class="s1">os</span><span class="s2">.</span><span class="s1">path</span><span class="s2">.</span><span class="s1">exists</span><span class="s2">(</span><span class="s3">'users_data.json'</span><span class="s2">):</span>
+            <span class="s0">with </span><span class="s1">open</span><span class="s2">(</span><span class="s3">'users_data.json'</span><span class="s2">, </span><span class="s3">'r'</span><span class="s2">) </span><span class="s0">as </span><span class="s1">file</span><span class="s2">:</span>
+                <span class="s1">data </span><span class="s2">= </span><span class="s1">json</span><span class="s2">.</span><span class="s1">load</span><span class="s2">(</span><span class="s1">file</span><span class="s2">)</span>
+        <span class="s0">else</span><span class="s2">:</span>
+            <span class="s1">data </span><span class="s2">= []</span>
+
+        <span class="s1">data</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">user_data</span><span class="s2">)</span>
+
+        <span class="s0">with </span><span class="s1">open</span><span class="s2">(</span><span class="s3">'user_data.json'</span><span class="s2">, </span><span class="s3">'w'</span><span class="s2">) </span><span class="s0">as </span><span class="s1">file</span><span class="s2">:</span>
+            <span class="s1">json</span><span class="s2">.</span><span class="s1">dump</span><span class="s2">(</span><span class="s1">data</span><span class="s2">, </span><span class="s1">file</span><span class="s2">, </span><span class="s1">indent</span><span class="s2">=</span><span class="s4">4</span><span class="s2">)</span>
+
+    <span class="s0">except </span><span class="s1">Exception </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">f&quot;Failed to write user data to JSON: </span><span class="s0">{</span><span class="s1">e</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+
+
+<span class="s5"># Fetch JIRA issues based on the provided JQL query and custom fields</span>
+<span class="s0">def </span><span class="s1">get_jira_issues</span><span class="s2">():</span>
+    <span class="s1">query </span><span class="s2">= {</span>
+        <span class="s3">'jql'</span><span class="s2">: </span><span class="s3">f'project=&quot;</span><span class="s0">{</span><span class="s1">JIRA_PROJECT_KEY</span><span class="s0">}</span><span class="s3">&quot; AND status=&quot;</span><span class="s0">{</span><span class="s1">JIRA_STATUS</span><span class="s0">}</span><span class="s3">&quot; ORDER BY created DESC'</span><span class="s2">,</span>
+        <span class="s3">'fields'</span><span class="s2">: </span><span class="s3">'customfield_12528,customfield_12420,customfield_12477,customfield_12529,customfield_12529'</span>
+    <span class="s2">}</span>
+
+    <span class="s0">try</span><span class="s2">:</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">f&quot;Sending GET request to </span><span class="s0">{</span><span class="s1">JIRA_URL</span><span class="s0">} </span><span class="s3">with query: </span><span class="s0">{</span><span class="s1">query</span><span class="s2">[</span><span class="s3">'jql'</span><span class="s2">]</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+        <span class="s1">response </span><span class="s2">= </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span>
+            <span class="s1">JIRA_URL</span><span class="s2">,</span>
+            <span class="s1">headers</span><span class="s2">={</span><span class="s3">&quot;Content-Type&quot;</span><span class="s2">: </span><span class="s3">&quot;application/json&quot;</span><span class="s2">},</span>
+            <span class="s1">auth</span><span class="s2">=</span><span class="s1">JIRA_AUTH</span><span class="s2">,</span>
+            <span class="s1">params</span><span class="s2">=</span><span class="s1">query</span>
+        <span class="s2">)</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s1">response</span><span class="s2">)</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">f&quot;Response Status Code: </span><span class="s0">{</span><span class="s1">response</span><span class="s2">.</span><span class="s1">status_code</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+        <span class="s1">response</span><span class="s2">.</span><span class="s1">raise_for_status</span><span class="s2">()</span>
+
+        <span class="s1">issues </span><span class="s2">= </span><span class="s1">response</span><span class="s2">.</span><span class="s1">json</span><span class="s2">()</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">f&quot;Fetched </span><span class="s0">{</span><span class="s1">len</span><span class="s2">(</span><span class="s1">issues</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s3">'issues'</span><span class="s2">, []))</span><span class="s0">} </span><span class="s3">issues from JIRA&quot;</span><span class="s2">)</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s1">issues</span><span class="s2">)</span>
+
+        <span class="s0">with </span><span class="s1">open</span><span class="s2">(</span><span class="s3">'user_data.json'</span><span class="s2">, </span><span class="s3">'w'</span><span class="s2">) </span><span class="s0">as </span><span class="s1">file</span><span class="s2">:</span>
+            <span class="s1">json</span><span class="s2">.</span><span class="s1">dump</span><span class="s2">(</span><span class="s1">issues</span><span class="s2">, </span><span class="s1">file</span><span class="s2">, </span><span class="s1">indent</span><span class="s2">=</span><span class="s4">4</span><span class="s2">)</span>
+
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">&quot;JIRA issues written to output.json&quot;</span><span class="s2">)</span>
+        <span class="s0">return </span><span class="s1">issues</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s3">'issues'</span><span class="s2">, [])</span>
+
+    <span class="s0">except </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">exceptions</span><span class="s2">.</span><span class="s1">RequestException </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">f&quot;Failed to fetch JIRA issues: </span><span class="s0">{</span><span class="s1">e</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+        <span class="s0">return </span><span class="s2">[]</span>
+
+
+<span class="s5"># Process user details and update JIRA</span>
+<span class="s0">def </span><span class="s1">process_user</span><span class="s2">(</span><span class="s1">issue</span><span class="s2">):</span>
+    <span class="s1">issue_key </span><span class="s2">= </span><span class="s1">issue</span><span class="s2">[</span><span class="s3">'key'</span><span class="s2">]</span>
+    <span class="s1">fields </span><span class="s2">= </span><span class="s1">issue</span><span class="s2">[</span><span class="s3">'fields'</span><span class="s2">]</span>
+
+    <span class="s5"># Extracting the custom fields</span>
+    <span class="s1">name </span><span class="s2">= </span><span class="s1">fields</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s3">'customfield_12528'</span><span class="s2">)</span>
+    <span class="s1">email </span><span class="s2">= </span><span class="s1">fields</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s3">'customfield_12420'</span><span class="s2">)</span>
+    <span class="s1">mobile </span><span class="s2">= </span><span class="s1">fields</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s3">'customfield_12477'</span><span class="s2">)</span>
+    <span class="s5"># dashboard_name = fields.get('customfield_12529')</span>
+    <span class="s1">role_name </span><span class="s2">= </span><span class="s1">fields</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s3">'customfield_12529'</span><span class="s2">)</span>
+
+    <span class="s0">if not </span><span class="s2">(</span><span class="s1">name </span><span class="s0">and </span><span class="s1">email </span><span class="s0">and </span><span class="s1">role_name</span><span class="s2">):</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">warning</span><span class="s2">(</span><span class="s3">f&quot;Missing required fields for issue </span><span class="s0">{</span><span class="s1">issue_key</span><span class="s0">}</span><span class="s3">. Skipping...&quot;</span><span class="s2">)</span>
+        <span class="s0">return</span>
+
+    <span class="s1">password </span><span class="s2">= </span><span class="s1">CONSTANT_PASSWORD</span>
+    <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">f&quot;Processing user: </span><span class="s0">{</span><span class="s1">name</span><span class="s0">}</span><span class="s3">, Email: </span><span class="s0">{</span><span class="s1">email</span><span class="s0">}</span><span class="s3">, Password: </span><span class="s0">{</span><span class="s1">password</span><span class="s0">}</span><span class="s3">, Role: </span><span class="s0">{</span><span class="s1">role_name</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+
+    <span class="s0">try</span><span class="s2">:</span>
+        <span class="s1">add_user_response </span><span class="s2">= </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">post</span><span class="s2">(</span>
+            <span class="s1">ADD_USER_URL</span><span class="s2">,</span>
+            <span class="s1">headers</span><span class="s2">={</span><span class="s3">'Content-Type'</span><span class="s2">: </span><span class="s3">'application/json'</span><span class="s2">},</span>
+            <span class="s1">data</span><span class="s2">=</span><span class="s1">json</span><span class="s2">.</span><span class="s1">dumps</span><span class="s2">({</span>
+                <span class="s3">&quot;contactNo&quot;</span><span class="s2">: </span><span class="s1">mobile</span><span class="s2">,</span>
+                <span class="s3">&quot;email&quot;</span><span class="s2">: </span><span class="s1">email</span><span class="s2">,</span>
+                <span class="s3">&quot;name&quot;</span><span class="s2">: </span><span class="s1">name</span><span class="s2">,</span>
+                <span class="s3">&quot;password&quot;</span><span class="s2">: </span><span class="s1">password</span><span class="s2">,</span>
+                <span class="s3">&quot;roleName&quot;</span><span class="s2">: </span><span class="s1">role_name</span>
+            <span class="s2">})</span>
+        <span class="s2">)</span>
+        <span class="s1">add_user_response</span><span class="s2">.</span><span class="s1">raise_for_status</span><span class="s2">()</span>
+
+        <span class="s0">if </span><span class="s1">add_user_response</span><span class="s2">.</span><span class="s1">status_code </span><span class="s2">== </span><span class="s4">201</span><span class="s2">:</span>
+            <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">f&quot;User </span><span class="s0">{</span><span class="s1">name</span><span class="s0">} </span><span class="s3">added successfully.&quot;</span><span class="s2">)</span>
+            <span class="s1">user_data </span><span class="s2">= {</span>
+                <span class="s3">&quot;name&quot;</span><span class="s2">: </span><span class="s1">name</span><span class="s2">,</span>
+                <span class="s3">&quot;email&quot;</span><span class="s2">: </span><span class="s1">email</span><span class="s2">,</span>
+                <span class="s3">&quot;contactNo&quot;</span><span class="s2">: </span><span class="s1">mobile</span><span class="s2">,</span>
+                <span class="s3">&quot;role&quot;</span><span class="s2">: </span><span class="s1">role_name</span><span class="s2">,</span>
+                <span class="s3">&quot;password&quot;</span><span class="s2">: </span><span class="s1">password</span>
+            <span class="s2">}</span>
+            <span class="s1">write_user_data_to_json</span><span class="s2">(</span><span class="s1">user_data</span><span class="s2">)</span>
+
+            <span class="s0">try</span><span class="s2">:</span>
+                <span class="s1">comment_response </span><span class="s2">= </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">post</span><span class="s2">(</span>
+                    <span class="s1">JIRA_COMMENT_URL</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s1">issue_key</span><span class="s2">=</span><span class="s1">issue_key</span><span class="s2">),</span>
+                    <span class="s1">auth</span><span class="s2">=</span><span class="s1">JIRA_AUTH</span><span class="s2">,</span>
+                    <span class="s1">headers</span><span class="s2">={</span><span class="s3">'Content-Type'</span><span class="s2">: </span><span class="s3">'application/json'</span><span class="s2">},</span>
+                    <span class="s1">data</span><span class="s2">=</span><span class="s1">json</span><span class="s2">.</span><span class="s1">dumps</span><span class="s2">({</span><span class="s3">&quot;body&quot;</span><span class="s2">: </span><span class="s3">&quot;Access has been granted.&quot;</span><span class="s2">})</span>
+                <span class="s2">)</span>
+                <span class="s1">comment_response</span><span class="s2">.</span><span class="s1">raise_for_status</span><span class="s2">()</span>
+
+                <span class="s0">if </span><span class="s1">comment_response</span><span class="s2">.</span><span class="s1">status_code </span><span class="s2">== </span><span class="s4">201</span><span class="s2">:</span>
+                    <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">f&quot;Comment added to issue </span><span class="s0">{</span><span class="s1">issue_key</span><span class="s0">}</span><span class="s3">.&quot;</span><span class="s2">)</span>
+                    <span class="s1">time</span><span class="s2">.</span><span class="s1">sleep</span><span class="s2">(</span><span class="s4">10</span><span class="s2">)</span>
+
+                    <span class="s0">try</span><span class="s2">:</span>
+                        <span class="s1">transition_response </span><span class="s2">= </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">post</span><span class="s2">(</span>
+                            <span class="s1">JIRA_TRANSITION_URL</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s1">issue_key</span><span class="s2">=</span><span class="s1">issue_key</span><span class="s2">),</span>
+                            <span class="s1">auth</span><span class="s2">=</span><span class="s1">JIRA_AUTH</span><span class="s2">,</span>
+                            <span class="s1">headers</span><span class="s2">={</span><span class="s3">'Content-Type'</span><span class="s2">: </span><span class="s3">'application/json'</span><span class="s2">},</span>
+                            <span class="s1">data</span><span class="s2">=</span><span class="s1">json</span><span class="s2">.</span><span class="s1">dumps</span><span class="s2">({</span><span class="s3">&quot;transition&quot;</span><span class="s2">: {</span><span class="s3">&quot;id&quot;</span><span class="s2">: </span><span class="s3">&quot;761&quot;</span><span class="s2">}})</span>
+                        <span class="s2">)</span>
+                        <span class="s1">transition_response</span><span class="s2">.</span><span class="s1">raise_for_status</span><span class="s2">()</span>
+
+                        <span class="s0">if </span><span class="s1">transition_response</span><span class="s2">.</span><span class="s1">status_code </span><span class="s2">== </span><span class="s4">204</span><span class="s2">:</span>
+                            <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">f&quot;Issue </span><span class="s0">{</span><span class="s1">issue_key</span><span class="s0">} </span><span class="s3">transitioned to 'Resolved'.&quot;</span><span class="s2">)</span>
+                            <span class="s1">send_email</span><span class="s2">(</span><span class="s1">email</span><span class="s2">, </span><span class="s1">password</span><span class="s2">)</span>
+                        <span class="s0">else</span><span class="s2">:</span>
+                            <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span>
+                                <span class="s3">f&quot;Failed to transition issue </span><span class="s0">{</span><span class="s1">issue_key</span><span class="s0">}</span><span class="s3">. Status code: </span><span class="s0">{</span><span class="s1">transition_response</span><span class="s2">.</span><span class="s1">status_code</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+                    <span class="s0">except </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">exceptions</span><span class="s2">.</span><span class="s1">RequestException </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+                        <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">f&quot;Failed to transition issue </span><span class="s0">{</span><span class="s1">issue_key</span><span class="s0">}</span><span class="s3">: </span><span class="s0">{</span><span class="s1">e</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+                <span class="s0">else</span><span class="s2">:</span>
+                    <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span>
+                        <span class="s3">f&quot;Failed to add comment to issue </span><span class="s0">{</span><span class="s1">issue_key</span><span class="s0">}</span><span class="s3">. Status code: </span><span class="s0">{</span><span class="s1">comment_response</span><span class="s2">.</span><span class="s1">status_code</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+            <span class="s0">except </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">exceptions</span><span class="s2">.</span><span class="s1">RequestException </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+                <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">f&quot;Failed to add comment to issue </span><span class="s0">{</span><span class="s1">issue_key</span><span class="s0">}</span><span class="s3">: </span><span class="s0">{</span><span class="s1">e</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+        <span class="s0">else</span><span class="s2">:</span>
+            <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">f&quot;Failed to add user </span><span class="s0">{</span><span class="s1">name</span><span class="s0">}</span><span class="s3">. Status code: </span><span class="s0">{</span><span class="s1">add_user_response</span><span class="s2">.</span><span class="s1">status_code</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+    <span class="s0">except </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">exceptions</span><span class="s2">.</span><span class="s1">RequestException </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">f&quot;Failed to add user </span><span class="s0">{</span><span class="s1">name</span><span class="s0">}</span><span class="s3">: </span><span class="s0">{</span><span class="s1">e</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+
+
+<span class="s0">def </span><span class="s1">main</span><span class="s2">():</span>
+    <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">&quot;Starting access automation script&quot;</span><span class="s2">)</span>
+
+    <span class="s1">issues </span><span class="s2">= </span><span class="s1">get_jira_issues</span><span class="s2">()</span>
+
+    <span class="s0">if not </span><span class="s1">issues</span><span class="s2">:</span>
+        <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">&quot;No issues found.&quot;</span><span class="s2">)</span>
+        <span class="s0">return</span>
+
+    <span class="s0">for </span><span class="s1">issue </span><span class="s0">in </span><span class="s1">issues</span><span class="s2">:</span>
+        <span class="s1">process_user</span><span class="s2">(</span><span class="s1">issue</span><span class="s2">)</span>
+
+    <span class="s1">logging</span><span class="s2">.</span><span class="s1">info</span><span class="s2">(</span><span class="s3">&quot;Access automation script completed&quot;</span><span class="s2">)</span>
+
+
+<span class="s0">if </span><span class="s1">__name__ </span><span class="s2">== </span><span class="s3">&quot;__main__&quot;</span><span class="s2">:</span>
+    <span class="s1">main</span><span class="s2">()</span>
+</pre>
+</body>
+</html>

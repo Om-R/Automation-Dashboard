@@ -32,7 +32,7 @@ EMAIL_SUBJECT = "Your Dashboard Access Credentials"
 CONSTANT_PASSWORD = "Lendingkart@321"
 
 logging.basicConfig(
-    filename='access_automation.log',
+    filename='Dashboard Automation/access_automation.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
