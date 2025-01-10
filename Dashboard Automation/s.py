@@ -7,20 +7,21 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import requests
 from requests.auth import HTTPBasicAuth
+
 # from dotenv import load_dotenv
 
 # load_dotenv()
-
+#providong access use tse user and try to incooprate it using curl which ankur provided
 JIRA_URL = "https://lendingkart.atlassian.net/rest/api/2/search"
-JIRA_USER = "automation.user@lendingkart.com"   #  tse@lendingkart.com -- Super admin   took jsession id to give access Ask ankur which user id is giving access
-JIRA_API_TOKEN="ATATT3xFfGF07jnnP2h7-tWWI1sV-ZPums3kvejb1zV4d8eCwrbXhY-MTLIQDv5rkCcOt6GU3o8BK03lBKB9kiUT8zZIu3JlZggC8yQwfpA_e-pfuHhCMX6yTv55KowjGhX8nMyYYzpSlpgILo0HNrTk4Rg2Fqto0EwJOUKeNDSrB2Um9wbua8Y=097D1ED1"
+JIRA_USER = "automation.user@lendingkart.com"
+JIRA_API_TOKEN = "ATATT3xFfGF07jnnP2h7-tWWI1sV-ZPums3kvejb1zV4d8eCwrbXhY-MTLIQDv5rkCcOt6GU3o8BK03lBKB9kiUT8zZIu3JlZggC8yQwfpA_e-pfuHhCMX6yTv55KowjGhX8nMyYYzpSlpgILo0HNrTk4Rg2Fqto0EwJOUKeNDSrB2Um9wbua8Y=097D1ED1"
 JIRA_AUTH = HTTPBasicAuth(JIRA_USER, JIRA_API_TOKEN)
 JIRA_PROJECT_KEY = "Tools Helpdesk"
-JIRA_REQUEST_TYPE = "Dashboard Access (TH)"   # Ask virendra regarding this
+JIRA_REQUEST_TYPE = "Test"
 JIRA_STATUS = "Approval Required"
 JIRA_TRANSITION_URL = "https://lendingkart.atlassian.net/rest/api/2/issue/{issue_key}/transitions"
 JIRA_COMMENT_URL = "https://lendingkart.atlassian.net/rest/api/2/issue/{issue_key}/comment"
-ADD_USER_URL = "https://app.lendingkart.com/admin/addUser"   # Cross check the link with ankur for adding user to dashboard
+ADD_USER_URL = "https://app.lendingkart.com/admin/addUser"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
 SMTP_USER = "automation.user@lendingkart.com"
@@ -28,7 +29,6 @@ SMTP_PASS = "eehi jeqo tskb dbwb"
 FROM_EMAIL = SMTP_USER
 EMAIL_SUBJECT = "Your Dashboard Access Credentials"
 CONSTANT_PASSWORD = "Lendingkart@321"
-JSESSIONID = "7b6c4bd7-2e93-410e-8014-24c0b30be582"
 
 logging.basicConfig(
     filename='access_automation.log',
@@ -62,8 +62,8 @@ def send_email(to_email, password):
 # Write user data to JSON file
 def write_user_data_to_json(user_data):
     try:
-        if os.path.exists('../users_data.json'):
-            with open('../users_data.json', 'r') as file:
+        if os.path.exists('users_data.json'):
+            with open('users_data.json', 'r') as file:
                 data = json.load(file)
         else:
             data = []
@@ -77,10 +77,9 @@ def write_user_data_to_json(user_data):
         logging.error(f"Failed to write user data to JSON: {e}")
 
 
-# Fetch JIRA issues based on the provided JQL query and custom fields
 def get_jira_issues():
     query = {
-        'jql': f'project="{JIRA_PROJECT_KEY}" AND status="{JIRA_STATUS}" ORDER BY created DESC',
+        'jql': f'project="{JIRA_PROJECT_KEY}" AND "Request Type" = "{JIRA_REQUEST_TYPE}" AND status="{JIRA_STATUS}" ORDER BY created DESC',
         'fields': 'customfield_12528,customfield_12420,customfield_12477,customfield_12529,customfield_12529'
     }
 
@@ -92,6 +91,7 @@ def get_jira_issues():
             auth=JIRA_AUTH,
             params=query
         )
+
         print(response)
         logging.info(f"Response Status Code: {response.status_code}")
         response.raise_for_status()
@@ -103,7 +103,7 @@ def get_jira_issues():
         with open('user_data.json', 'w') as file:
             json.dump(issues, file, indent=4)
 
-        logging.info("JIRA issues written to user_data.json")
+        logging.info("JIRA issues written to output.json")
         return issues.get('issues', [])
 
     except requests.exceptions.RequestException as e:
@@ -131,11 +131,9 @@ def process_user(issue):
     logging.info(f"Processing user: {name}, Email: {email}, Password: {password}, Role: {role_name}")
 
     try:
-        cookies = {'JSESSIONID': JSESSIONID}
         add_user_response = requests.post(
             ADD_USER_URL,
             headers={'Content-Type': 'application/json'},
-            cookies=cookies,
             data=json.dumps({
                 "contactNo": mobile,
                 "email": email,

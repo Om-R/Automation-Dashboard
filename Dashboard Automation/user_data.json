@@ -2,15 +2,123 @@
     "expand": "schema,names",
     "startAt": 0,
     "maxResults": 50,
-    "total": 60,
+    "total": 68,
     "issues": [
         {
             "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "270798",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/270798",
-            "key": "TH-4373",
+            "id": "271084",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271084",
+            "key": "TH-4407",
             "fields": {
-                "customfield_12420": "amol.goure@lendingkart.com",
+                "customfield_12420": "madhan.n@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271081",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271081",
+            "key": "TH-4406",
+            "fields": {
+                "customfield_12420": "meram.prasad@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271072",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271072",
+            "key": "TH-4404",
+            "fields": {
+                "customfield_12420": "meram.prasad@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271033",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271033",
+            "key": "TH-4397",
+            "fields": {
+                "customfield_12420": "madhan.n@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271031",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271031",
+            "key": "TH-4396",
+            "fields": {
+                "customfield_12420": "madhan.n@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271030",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271030",
+            "key": "TH-4395",
+            "fields": {
+                "customfield_12420": "madhan.n@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271025",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271025",
+            "key": "TH-4392",
+            "fields": {
+                "customfield_12420": "sakthi.maheswari@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271024",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271024",
+            "key": "TH-4391",
+            "fields": {
+                "customfield_12420": "madhan.n@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271023",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271023",
+            "key": "TH-4390",
+            "fields": {
+                "customfield_12420": "sakthi.maheswari@lendingkart.com",
+                "customfield_12529": null,
+                "customfield_12477": null,
+                "customfield_12528": null
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "271021",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/271021",
+            "key": "TH-4389",
+            "fields": {
+                "customfield_12420": "sakthi.maheswari@lendingkart.com",
                 "customfield_12529": null,
                 "customfield_12477": null,
                 "customfield_12528": null
@@ -56,18 +164,6 @@
                 },
                 "customfield_12477": 7796141705.0,
                 "customfield_12528": "Om Rupesh Jain"
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "270664",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/270664",
-            "key": "TH-4354",
-            "fields": {
-                "customfield_12420": "dipti.shah@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": 9949565783.0,
-                "customfield_12528": null
             }
         },
         {
@@ -521,102 +617,6 @@
             "key": "TH-3804",
             "fields": {
                 "customfield_12420": "shivam.gaur@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": null,
-                "customfield_12528": null
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "263896",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/263896",
-            "key": "TH-3745",
-            "fields": {
-                "customfield_12420": "narendrakumar.ravuri@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": null,
-                "customfield_12528": null
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "263893",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/263893",
-            "key": "TH-3744",
-            "fields": {
-                "customfield_12420": "harsh.patadiya@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": null,
-                "customfield_12528": null
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "263753",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/263753",
-            "key": "TH-3730",
-            "fields": {
-                "customfield_12420": "asija.prakash@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": null,
-                "customfield_12528": null
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "263317",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/263317",
-            "key": "TH-3715",
-            "fields": {
-                "customfield_12420": "ayush.chintaman@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": null,
-                "customfield_12528": null
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "263284",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/263284",
-            "key": "TH-3708",
-            "fields": {
-                "customfield_12420": "swathika.p@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": null,
-                "customfield_12528": null
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "263253",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/263253",
-            "key": "TH-3704",
-            "fields": {
-                "customfield_12420": "nandhini.kuppuraj@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": null,
-                "customfield_12528": null
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "262960",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/262960",
-            "key": "TH-3688",
-            "fields": {
-                "customfield_12420": "chavatapalli.nagarjuna@lendingkart.com",
-                "customfield_12529": null,
-                "customfield_12477": null,
-                "customfield_12528": null
-            }
-        },
-        {
-            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-            "id": "262945",
-            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/262945",
-            "key": "TH-3686",
-            "fields": {
-                "customfield_12420": "nandhini.kuppuraj@lendingkart.com",
                 "customfield_12529": null,
                 "customfield_12477": null,
                 "customfield_12528": null
