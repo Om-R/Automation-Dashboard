@@ -21,9 +21,9 @@ JIRA_REQUEST_TYPE = "Test"
 JIRA_STATUS = "Approval Required"
 
 # TSE User credentials and URL
-TSE_USER = "tse@lendingkart.com"  # Replace with actual TSE user email
-JSESSION_ID = "48a529a8-bcd3-4591-943e-0affc3b105a0"  # Replace with actual JSESSIONID
-ADD_USER_URL = "https://app.lendingkart.com/admin/addUser"  # Removed extra spaces
+TSE_USER = "tse@lendingkart.com"
+JSESSION_ID = "48a529a8-bcd3-4591-943e-0affc3b105a0"
+ADD_USER_URL = "https://app.lendingkart.com/admin/addUser"
 Accept = "/"
 
 
