@@ -1,0 +1,50 @@
+{
+    "expand": "schema,names",
+    "startAt": 0,
+    "maxResults": 50,
+    "total": 2,
+    "issues": [
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "270668",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/270668",
+            "key": "TH-4356",
+            "fields": {
+                "customfield_12420": "om.jain@lendingkart.com",
+                "customfield_12529": {
+                    "self": "https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959",
+                    "value": "Accounts Dashboard",
+                    "id": "12959",
+                    "child": {
+                        "self": "https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961",
+                        "value": "Accounts Read Only",
+                        "id": "12961"
+                    }
+                },
+                "customfield_12477": 7796141776.0,
+                "customfield_12528": "Om Jain"
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "270667",
+            "self": "https://lendingkart.atlassian.net/rest/api/2/issue/270667",
+            "key": "TH-4355",
+            "fields": {
+                "customfield_12420": "om.jain@lendingkart.com",
+                "customfield_12529": {
+                    "self": "https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959",
+                    "value": "Accounts Dashboard",
+                    "id": "12959",
+                    "child": {
+                        "self": "https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961",
+                        "value": "Accounts Read Only",
+                        "id": "12961"
+                    }
+                },
+                "customfield_12477": 7796141705.0,
+                "customfield_12528": "Om Rupesh Jain"
+            }
+        }
+    ]
+}
