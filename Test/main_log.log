@@ -934,3 +934,15 @@
 2025-01-16 16:17:25,001 - ERROR - Error occurred while adding user Om Rupesh Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
 2025-01-16 16:17:25,001 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with email: om.jain@lendingkart.com already exists"}
 2025-01-16 16:17:25,002 - INFO - Failed to grant access to user Om Rupesh Jain.
+2025-01-17 12:16:43,284 - INFO - Starting TSE user access script
+2025-01-17 12:16:43,285 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-17 12:16:44,059 - INFO - Fetched 2 issues from JIRA
+2025-01-17 12:16:44,062 - INFO - JIRA issues written to data_main.json
+2025-01-17 12:16:44,063 - INFO - Processing issue: TH-4498 with name: Om Jain, email: omjain990@gmail.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-17 12:16:44,063 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'omjain990@gmail.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-17 12:16:44,597 - INFO - User   Om Jain added successfully.
+2025-01-17 12:16:44,598 - INFO - User  Om Jain access granted successfully.
+2025-01-17 12:16:44,599 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-17 12:16:44,599 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-17 12:16:45,100 - INFO - User   Om Rupesh Jain added successfully.
+2025-01-17 12:16:45,101 - INFO - User  Om Rupesh Jain access granted successfully.
