@@ -150,3 +150,17 @@
 2025-01-06 13:56:05,841 - INFO - JIRA issues written to output.json
 2025-01-06 13:56:05,842 - INFO - Fetched 50 issues from JIRA.
 2025-01-06 13:56:05,842 - INFO - Access automation script completed
+2025-01-20 16:19:18,095 - INFO - Starting access automation script
+2025-01-20 16:19:18,095 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-20 16:19:23,017 - INFO - Response Status Code: 200
+2025-01-20 16:19:23,025 - INFO - Fetched 50 issues from JIRA
+2025-01-20 16:19:23,094 - INFO - JIRA issues written to output.json
+2025-01-20 16:19:23,094 - INFO - Fetched 50 issues from JIRA.
+2025-01-20 16:19:23,094 - INFO - Access automation script completed
+2025-01-23 12:47:16,540 - INFO - Starting access automation script
+2025-01-23 12:47:16,540 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND status="Approval Required" ORDER BY created DESC
+2025-01-23 12:47:21,859 - INFO - Response Status Code: 200
+2025-01-23 12:47:21,870 - INFO - Fetched 50 issues from JIRA
+2025-01-23 12:47:21,920 - INFO - JIRA issues written to output.json
+2025-01-23 12:47:21,921 - INFO - Fetched 50 issues from JIRA.
+2025-01-23 12:47:21,921 - INFO - Access automation script completed

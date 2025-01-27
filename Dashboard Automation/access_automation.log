@@ -1822,3 +1822,13 @@
 2025-01-10 10:57:18,637 - INFO - Response Status Code: 404
 2025-01-10 10:57:18,638 - ERROR - Failed to fetch JIRA issues: 404 Client Error: Not Found for url: https://lendingkart.atlassian.net/rest/api/2/search/search?jql=project%3D%22Tools+Helpdesk%22+AND+%22Request+type%22%3D%22Test%22+AND+status%3D%22Approval+Required%22+ORDER+BY+created+DESC&fields=customfield_12528%2Ccustomfield_12420%2Ccustomfield_12477%2Ccustomfield_12529%2Ccustomfield_12529
 2025-01-10 10:57:18,639 - INFO - No issues found.
+2025-01-24 10:25:10,842 - INFO - Starting access automation script
+2025-01-24 10:25:10,843 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-24 10:25:11,943 - INFO - Response Status Code: 200
+2025-01-24 10:25:11,944 - INFO - Fetched 2 issues from JIRA
+2025-01-24 10:25:11,948 - INFO - JIRA issues written to output.json
+2025-01-24 10:25:11,949 - INFO - Processing user: Om Jain, Email: om.jain@lendingkart.com, Password: Lendingkart@321, Role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-24 10:25:12,142 - ERROR - Failed to add user Om Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-24 10:25:12,143 - INFO - Processing user: Om Rupesh Jain, Email: om.jain@lendingkart.com, Password: Lendingkart@321, Role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-24 10:25:12,326 - ERROR - Failed to add user Om Rupesh Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-24 10:25:12,326 - INFO - Access automation script completed

@@ -80,7 +80,7 @@ def write_user_data_to_json(user_data):
 def get_jira_issues():
     query = {
         'jql': f'project="{JIRA_PROJECT_KEY}" AND "Request Type" = "{JIRA_REQUEST_TYPE}" AND status="{JIRA_STATUS}" ORDER BY created DESC',
-        'fields': 'customfield_12528,customfield_12420,customfield_12477,customfield_12529,customfield_12529'
+        # 'fields': 'customfield_12528,customfield_12420,customfield_12477,customfield_12529,customfield_12529'
     }
 
     try:

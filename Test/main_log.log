@@ -946,3 +946,167 @@
 2025-01-17 12:16:44,599 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
 2025-01-17 12:16:45,100 - INFO - User   Om Rupesh Jain added successfully.
 2025-01-17 12:16:45,101 - INFO - User  Om Rupesh Jain access granted successfully.
+2025-01-20 16:22:18,950 - INFO - Starting TSE user access script
+2025-01-20 16:22:18,950 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-20 16:22:19,696 - INFO - Fetched 2 issues from JIRA
+2025-01-20 16:22:19,700 - INFO - JIRA issues written to data_main.json
+2025-01-20 16:22:19,701 - INFO - Processing issue: TH-4498 with name: Om Jain, email: omjain990@gmail.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-20 16:22:19,702 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'omjain990@gmail.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-20 16:22:19,865 - ERROR - Error occurred while adding user Om Jain: 403 Client Error: Forbidden for url: https://app.lendingkart.com/admin/addUser
+2025-01-20 16:22:19,865 - ERROR - Response content: {"errorCode":"AUTHENTICATION_FAILED","message":"This subject is anonymous - it does not have any identifying principals and authorization operations require an identity to check against.  A Subject instance will acquire these identifying principals automatically after a successful login is performed be executing org.apache.shiro.subject.Subject.login(AuthenticationToken) or when 'Remember Me' functionality is enabled by the SecurityManager.  This exception can also occur when a previously logged-in Subject has logged out which makes it anonymous again.  Because an identity is currently not known due to any of these conditions, authorization is denied."}
+2025-01-20 16:22:19,866 - INFO - Failed to grant access to user Om Jain.
+2025-01-20 16:22:19,866 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-20 16:22:19,866 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-20 16:22:20,021 - ERROR - Error occurred while adding user Om Rupesh Jain: 403 Client Error: Forbidden for url: https://app.lendingkart.com/admin/addUser
+2025-01-20 16:22:20,022 - ERROR - Response content: {"errorCode":"AUTHENTICATION_FAILED","message":"This subject is anonymous - it does not have any identifying principals and authorization operations require an identity to check against.  A Subject instance will acquire these identifying principals automatically after a successful login is performed be executing org.apache.shiro.subject.Subject.login(AuthenticationToken) or when 'Remember Me' functionality is enabled by the SecurityManager.  This exception can also occur when a previously logged-in Subject has logged out which makes it anonymous again.  Because an identity is currently not known due to any of these conditions, authorization is denied."}
+2025-01-20 16:22:20,022 - INFO - Failed to grant access to user Om Rupesh Jain.
+2025-01-20 17:41:55,457 - INFO - Starting TSE user access script
+2025-01-20 17:41:55,457 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-20 17:41:56,450 - INFO - Fetched 2 issues from JIRA
+2025-01-20 17:41:56,455 - INFO - JIRA issues written to data_main.json
+2025-01-20 17:41:56,456 - INFO - Processing issue: TH-4498 with name: Om Jain, email: omjain990@gmail.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-20 17:41:56,456 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'omjain990@gmail.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-20 17:41:56,622 - ERROR - Error occurred while adding user Om Jain: 403 Client Error: Forbidden for url: https://app.lendingkart.com/admin/addUser
+2025-01-20 17:41:56,622 - ERROR - Response content: {"errorCode":"AUTHENTICATION_FAILED","message":"This subject is anonymous - it does not have any identifying principals and authorization operations require an identity to check against.  A Subject instance will acquire these identifying principals automatically after a successful login is performed be executing org.apache.shiro.subject.Subject.login(AuthenticationToken) or when 'Remember Me' functionality is enabled by the SecurityManager.  This exception can also occur when a previously logged-in Subject has logged out which makes it anonymous again.  Because an identity is currently not known due to any of these conditions, authorization is denied."}
+2025-01-20 17:41:56,623 - INFO - Failed to grant access to user Om Jain.
+2025-01-20 17:41:56,624 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-20 17:41:56,624 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-20 17:41:56,764 - ERROR - Error occurred while adding user Om Rupesh Jain: 403 Client Error: Forbidden for url: https://app.lendingkart.com/admin/addUser
+2025-01-20 17:41:56,765 - ERROR - Response content: {"errorCode":"AUTHENTICATION_FAILED","message":"This subject is anonymous - it does not have any identifying principals and authorization operations require an identity to check against.  A Subject instance will acquire these identifying principals automatically after a successful login is performed be executing org.apache.shiro.subject.Subject.login(AuthenticationToken) or when 'Remember Me' functionality is enabled by the SecurityManager.  This exception can also occur when a previously logged-in Subject has logged out which makes it anonymous again.  Because an identity is currently not known due to any of these conditions, authorization is denied."}
+2025-01-20 17:41:56,765 - INFO - Failed to grant access to user Om Rupesh Jain.
+2025-01-22 12:33:05,150 - INFO - Starting TSE user access script
+2025-01-22 12:33:05,150 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-22 12:33:06,556 - INFO - Fetched 2 issues from JIRA
+2025-01-22 12:33:06,561 - INFO - JIRA issues written to data_main.json
+2025-01-22 12:33:06,562 - INFO - Processing issue: TH-4498 with name: Om Jain, email: omjain990@gmail.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-22 12:33:06,562 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'omjain990@gmail.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-22 12:33:07,201 - INFO - User   Om Jain added successfully.
+2025-01-22 12:33:07,202 - INFO - User  Om Jain access granted successfully.
+2025-01-22 12:33:07,202 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-22 12:33:07,202 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-22 12:33:07,791 - INFO - User   Om Rupesh Jain added successfully.
+2025-01-22 12:33:07,792 - INFO - User  Om Rupesh Jain access granted successfully.
+2025-01-23 10:58:29,387 - INFO - Starting TSE user access script
+2025-01-23 10:58:29,387 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-23 10:58:30,447 - INFO - Fetched 2 issues from JIRA
+2025-01-23 10:58:30,451 - INFO - JIRA issues written to data_main.json
+2025-01-23 10:58:30,453 - INFO - Processing issue: TH-4498 with name: Om Jain, email: om.jain@lendingkart.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 10:58:30,453 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'om.jain@lendingkart.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 10:58:30,681 - ERROR - Error occurred while adding user Om Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 10:58:30,681 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 9011566550 already exists"}
+2025-01-23 10:58:30,681 - INFO - Failed to grant access to user Om Jain.
+2025-01-23 10:58:30,681 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 10:58:30,681 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 10:58:30,851 - ERROR - Error occurred while adding user Om Rupesh Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 10:58:30,851 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 7796141705 already exists"}
+2025-01-23 10:58:30,851 - INFO - Failed to grant access to user Om Rupesh Jain.
+2025-01-23 10:59:46,854 - INFO - Starting TSE user access script
+2025-01-23 10:59:46,854 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-23 10:59:47,330 - INFO - Fetched 2 issues from JIRA
+2025-01-23 10:59:47,330 - INFO - JIRA issues written to data_main.json
+2025-01-23 10:59:47,331 - INFO - Processing issue: TH-4498 with name: Om Jain, email: om.jain@lendingkart.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 10:59:47,331 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'om.jain@lendingkart.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 10:59:47,498 - ERROR - Error occurred while adding user Om Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 10:59:47,499 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 9011566550 already exists"}
+2025-01-23 10:59:47,499 - INFO - Failed to grant access to user Om Jain.
+2025-01-23 10:59:47,499 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 10:59:47,499 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 10:59:47,673 - ERROR - Error occurred while adding user Om Rupesh Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 10:59:47,674 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 7796141705 already exists"}
+2025-01-23 10:59:47,674 - INFO - Failed to grant access to user Om Rupesh Jain.
+2025-01-23 12:45:38,183 - INFO - Starting TSE user access script
+2025-01-23 12:45:38,183 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-23 12:45:39,191 - INFO - Fetched 2 issues from JIRA
+2025-01-23 12:45:39,194 - INFO - JIRA issues written to data_main.json
+2025-01-23 12:45:39,195 - INFO - Processing issue: TH-4498 with name: Om Jain, email: om.jain@lendingkart.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 12:45:39,195 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'om.jain@lendingkart.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 12:45:39,394 - ERROR - Error occurred while adding user Om Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 12:45:39,394 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 9011566550 already exists"}
+2025-01-23 12:45:39,394 - INFO - Failed to grant access to user Om Jain.
+2025-01-23 12:45:39,394 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 12:45:39,394 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 12:45:39,590 - ERROR - Error occurred while adding user Om Rupesh Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 12:45:39,590 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 7796141705 already exists"}
+2025-01-23 12:45:39,591 - INFO - Failed to grant access to user Om Rupesh Jain.
+2025-01-23 12:46:23,845 - INFO - Starting TSE user access script
+2025-01-23 12:46:23,845 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-23 12:46:24,688 - INFO - Fetched 2 issues from JIRA
+2025-01-23 12:46:24,691 - INFO - JIRA issues written to data_main.json
+2025-01-23 12:46:41,536 - INFO - Starting TSE user access script
+2025-01-23 12:46:41,537 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-23 12:46:42,495 - INFO - Fetched 2 issues from JIRA
+2025-01-23 12:46:42,498 - INFO - JIRA issues written to data_main.json
+2025-01-23 12:46:42,499 - INFO - Processing issue: TH-4498 with name: Om Jain, email: omjain990@gmail.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 12:46:42,500 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'omjain990@gmail.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 12:46:42,695 - ERROR - Error occurred while adding user Om Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 12:46:42,696 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 9011566550 already exists"}
+2025-01-23 12:46:42,696 - INFO - Failed to grant access to user Om Jain.
+2025-01-23 12:46:42,696 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 12:46:42,696 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 12:46:42,854 - ERROR - Error occurred while adding user Om Rupesh Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 12:46:42,854 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 7796141705 already exists"}
+2025-01-23 12:46:42,854 - INFO - Failed to grant access to user Om Rupesh Jain.
+2025-01-23 15:53:15,130 - INFO - Starting TSE user access script
+2025-01-23 15:53:15,130 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-23 15:53:16,202 - INFO - Fetched 2 issues from JIRA
+2025-01-23 15:53:16,207 - INFO - JIRA issues written to data_main.json
+2025-01-23 15:53:16,208 - INFO - Processing issue: TH-4498 with name: Om Jain, email: omjain990@gmail.com, mobile: 9011566550, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 15:53:16,208 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '9011566550', 'email': 'omjain990@gmail.com', 'name': 'Om Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 15:53:16,447 - ERROR - Error occurred while adding user Om Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 15:53:16,447 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 9011566550 already exists"}
+2025-01-23 15:53:16,448 - INFO - Failed to grant access to user Om Jain.
+2025-01-23 15:53:16,448 - INFO - Processing issue: TH-4497 with name: Om Rupesh Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12959', 'value': 'Accounts Dashboard', 'id': '12959', 'child': {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/12961', 'value': 'Account Read Only', 'id': '12961'}}
+2025-01-23 15:53:16,448 - INFO - Sending POST request to https://app.lendingkart.com/admin/addUser with data: {'contactNo': '7796141705', 'email': 'om.jain@lendingkart.com', 'name': 'Om Rupesh Jain', 'password': 'Pass@321', 'roleName': 'Account Read Only'}
+2025-01-23 15:53:16,625 - ERROR - Error occurred while adding user Om Rupesh Jain: 400 Client Error: Bad Request for url: https://app.lendingkart.com/admin/addUser
+2025-01-23 15:53:16,625 - ERROR - Response content: {"errorCode":"BAD_REQUEST","message":"User with mobile: 7796141705 already exists"}
+2025-01-23 15:53:16,626 - INFO - Failed to grant access to user Om Rupesh Jain.
+2025-01-27 12:54:57,570 - INFO - Starting TSE user access script
+2025-01-27 12:54:57,570 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-27 12:54:58,054 - INFO - Fetched 0 issues from JIRA
+2025-01-27 12:54:58,056 - INFO - JIRA issues written to data_main.json
+2025-01-27 12:54:58,058 - INFO - No issues found.
+2025-01-27 13:59:59,616 - INFO - Starting TSE user access script
+2025-01-27 13:59:59,616 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "Test" AND status="Approval Required" ORDER BY created DESC
+2025-01-27 14:00:00,351 - INFO - Fetched 0 issues from JIRA
+2025-01-27 14:00:00,353 - INFO - JIRA issues written to data_main.json
+2025-01-27 14:00:00,354 - INFO - No issues found.
+2025-01-27 15:16:39,018 - INFO - Starting TSE user access script
+2025-01-27 15:16:39,018 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "LK Dashboards" AND status="Approval Required" ORDER BY created DESC
+2025-01-27 15:16:39,444 - INFO - Fetched 3 issues from JIRA
+2025-01-27 15:16:39,445 - INFO - JIRA issues written to data_main.json
+2025-01-27 15:16:39,445 - INFO - Processing issue: TH-4689 with name: None, email: om.jain@lendingkart.com, mobile: 7796141705, role: None
+2025-01-27 15:16:39,445 - WARNING - Missing required fields for issue TH-4689. Skipping...
+2025-01-27 15:16:39,445 - INFO - Processing issue: TH-4687 with name: None, email: parvez.girach@lendingkart.com, mobile: 8866695838, role: None
+2025-01-27 15:16:39,445 - WARNING - Missing required fields for issue TH-4687. Skipping...
+2025-01-27 15:16:39,445 - INFO - Processing issue: TH-4530 with name: None, email: ronak.patel@lendingkart.com, mobile: 9428614630, role: None
+2025-01-27 15:16:39,445 - WARNING - Missing required fields for issue TH-4530. Skipping...
+2025-01-27 15:17:14,151 - INFO - Starting TSE user access script
+2025-01-27 15:17:14,151 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "LK Dashboards" AND status="Approval Required" ORDER BY created DESC
+2025-01-27 15:17:14,896 - INFO - Fetched 3 issues from JIRA
+2025-01-27 15:17:14,903 - INFO - JIRA issues written to data_main.json
+2025-01-27 15:17:14,904 - INFO - Processing issue: TH-4689 with name: None, email: om.jain@lendingkart.com, mobile: 7796141705, role: None
+2025-01-27 15:17:14,904 - WARNING - Missing required fields for issue TH-4689. Skipping...
+2025-01-27 15:17:14,904 - INFO - Processing issue: TH-4687 with name: None, email: parvez.girach@lendingkart.com, mobile: 8866695838, role: None
+2025-01-27 15:17:14,904 - WARNING - Missing required fields for issue TH-4687. Skipping...
+2025-01-27 15:17:14,904 - INFO - Processing issue: TH-4530 with name: None, email: ronak.patel@lendingkart.com, mobile: 9428614630, role: None
+2025-01-27 15:17:14,904 - WARNING - Missing required fields for issue TH-4530. Skipping...
+2025-01-27 15:18:24,152 - INFO - Starting TSE user access script
+2025-01-27 15:18:24,153 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "LK Dashboards" AND status="Approval Required" ORDER BY created DESC
+2025-01-27 15:18:24,910 - INFO - Fetched 3 issues from JIRA
+2025-01-27 15:18:24,913 - INFO - JIRA issues written to data_main.json
+2025-01-27 15:18:24,915 - INFO - Processing issue: TH-4689 with name: Om Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: None
+2025-01-27 15:18:24,915 - WARNING - Missing required fields for issue TH-4689. Skipping...
+2025-01-27 15:18:24,915 - INFO - Processing issue: TH-4687 with name: parvez girach, email: parvez.girach@lendingkart.com, mobile: 8866695838, role: None
+2025-01-27 15:18:24,915 - WARNING - Missing required fields for issue TH-4687. Skipping...
+2025-01-27 15:18:24,915 - INFO - Processing issue: TH-4530 with name: Ronak Patel, email: ronak.patel@lendingkart.com, mobile: 9428614630, role: None
+2025-01-27 15:18:24,915 - WARNING - Missing required fields for issue TH-4530. Skipping...
+2025-01-27 15:19:19,090 - INFO - Starting TSE user access script
+2025-01-27 15:19:19,090 - INFO - Sending GET request to https://lendingkart.atlassian.net/rest/api/2/search with query: project="Tools Helpdesk" AND "Request Type" = "LK Dashboards" AND status="Approval Required" ORDER BY created DESC
+2025-01-27 15:19:20,096 - INFO - Fetched 3 issues from JIRA
+2025-01-27 15:19:20,102 - INFO - JIRA issues written to data_main.json
+2025-01-27 15:19:20,103 - INFO - Processing issue: TH-4689 with name: Om Jain, email: om.jain@lendingkart.com, mobile: 7796141705, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11679', 'value': 'Account Read Only', 'id': '11679'}
+2025-01-27 15:19:20,103 - WARNING - Access denied for user Om Jain. Role '{'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11679', 'value': 'Account Read Only', 'id': '11679'}' is not allowed to be granted access. Skipping...
+2025-01-27 15:19:20,103 - INFO - Processing issue: TH-4687 with name: parvez girach, email: parvez.girach@lendingkart.com, mobile: 8866695838, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11659', 'value': 'Credit Manager', 'id': '11659'}
+2025-01-27 15:19:20,104 - WARNING - Access denied for user parvez girach. Role '{'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11659', 'value': 'Credit Manager', 'id': '11659'}' is not allowed to be granted access. Skipping...
+2025-01-27 15:19:20,104 - INFO - Processing issue: TH-4530 with name: Ronak Patel, email: ronak.patel@lendingkart.com, mobile: 9428614630, role: {'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11678', 'value': 'Accounts', 'id': '11678'}
+2025-01-27 15:19:20,104 - WARNING - Access denied for user Ronak Patel. Role '{'self': 'https://lendingkart.atlassian.net/rest/api/2/customFieldOption/11678', 'value': 'Accounts', 'id': '11678'}' is not allowed to be granted access. Skipping...
